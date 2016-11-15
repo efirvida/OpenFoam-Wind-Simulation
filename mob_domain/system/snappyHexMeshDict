@@ -130,7 +130,7 @@ castellatedMeshControls
     // section reachable from the locationInMesh is kept.
     // NOTE: This point should never be on a face, always inside a cell, even
     // after refinement.
-    locationInMesh (20 0 5);
+    locationInMesh (-10 0 5);
     
     allowFreeStandingZoneFaces true;
 
