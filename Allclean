@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -rf 0
+
+rm -rf *_domain*/log.*
+rm -rf *_domain*/*.foam
+rm -rf *_domain*/constant/polyMesh
+rm -rf *_domain*/postProcessing
+rm -rf *_domain*/processor*
+
+echo CLEAN DONE

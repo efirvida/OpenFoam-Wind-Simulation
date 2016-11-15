@@ -1,0 +1,5 @@
+#!/bin/sh
+rm log.*
+rm -rf constant/polyMesh
+rm -rf processor*
+rm system/blockMeshDict

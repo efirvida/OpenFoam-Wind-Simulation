@@ -1,0 +1,15 @@
+.vscode
+*.avi
+*log.*
+
+*_domain*/constant/polyMesh/*
+*_domain*/constant/extendedFeatureEdgeMesh/*
+*_domain*/processor*
+*_domain*/0
+
+!0.org/*
+!*_domain*/constant/*
+!*_domain*/system/*
+!*.m4
+!Allrun
+!Allclean

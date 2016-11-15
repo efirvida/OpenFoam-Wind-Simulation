@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cd ./fix_domain
+./Allrun
+cd ../mob_domain
+./Allrun
+cd ../merg_domains
+./Allrun
+
+rm -rf ../*_domain/processor*

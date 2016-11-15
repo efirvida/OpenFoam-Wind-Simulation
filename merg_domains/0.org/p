@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    //- Set patchGroups for constraint patches
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    entrada_ext_dominio
+    {
+        type            zeroGradient;
+    }
+
+    salida_ext_dominio
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    
+    cilindro_ext_dominio
+    {
+        type            zeroGradient;
+    }
+
+    wall
+    {
+        type            zeroGradient;
+    }
+    
+    cyclicAMI
+    {
+        type            cyclicAMI;
+        value           $internalField;
+    }
+}
+
+// ************************************************************************* //
