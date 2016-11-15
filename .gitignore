@@ -7,7 +7,7 @@
 *_domain*/constant/polyMesh/*
 *_domain*/constant/extendedFeatureEdgeMesh/*
 *_domain*/processor*
-*_domain*/0
+*_domain*/0*
 
 # !0.org/*
 # !*_domain*/constant/*
