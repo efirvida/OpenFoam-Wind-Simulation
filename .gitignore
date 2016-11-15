@@ -1,5 +1,7 @@
 .vscode
 *.avi
+*.foam
+*.eMesh
 *log.*
 
 *_domain*/constant/polyMesh/*
@@ -7,9 +9,11 @@
 *_domain*/processor*
 *_domain*/0
 
-!0.org/*
-!*_domain*/constant/*
-!*_domain*/system/*
-!*.m4
-!Allrun
-!Allclean
+# !0.org/*
+# !*_domain*/constant/*
+# !*_domain*/system/*
+# !*.m4
+# !Allrun
+# !Allclean
+
+*_domain*/system/blockMeshDict

@@ -10,7 +10,8 @@ renumberMesh -overwrite
 ./setAmi
 topoSet
 
-cp -rf 0.org 0
+mkdir 0
+cp -rf ./0.org/* ./0/*
 
 #---------------------------------------# 
 #               PARALELO                #
@@ -22,11 +23,12 @@ mpiexec -n 4 moveDynamicMesh -parallel
 # runParallel moveDynamicMesh
 #--------------------------------------#
 
-
 #-----------------------------------# 
 #           NO PARALELO             #
 #-----------------------------------# 
 # moveDynamicMesh
 # pimpleDyMFoam
 
+
+rm -rf ../*_domain/processor*
 touch ${PWD##*/}.foam
