@@ -1,11 +1,9 @@
 #!/bin/sh
 
-rm -rf 0
+cd ./fix_domain
+./Allclean
+cd ../mob_domain
+./Allclean
+cd ../merg_domains
+./Allclean
 
-rm -rf *_domain*/log.*
-rm -rf *_domain*/*.foam
-rm -rf *_domain*/constant/polyMesh
-rm -rf *_domain*/postProcessing
-rm -rf *_domain*/processor*
-
-echo CLEAN DONE
