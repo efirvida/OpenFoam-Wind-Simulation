@@ -1,1 +1,1 @@
-# OpenFoam-Wind-Simulation
+# OpenFoam Wind Turbine Simulation Case
