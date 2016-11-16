@@ -40,7 +40,7 @@ m4_define(rcos, [calc(r_disco*cos(rad(45)))])
 # Bloques parte media
 m4_define(x_block, 40)
 m4_define(y_block, 40)
-m4_define(z_block, 20)
+m4_define(z_block, 40)
 m4_define(grading_block, 1 1 1)
 
 m4_divert(0)
