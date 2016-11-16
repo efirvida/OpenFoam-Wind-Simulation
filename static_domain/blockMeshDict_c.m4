@@ -26,34 +26,34 @@ m4_define(rad, [calc($1*pi/180.0)])
 m4_define(units, 1)
 
 # Datos del disco del rotor
-m4_define(r_rotor, 62.9)            # radio del rotor
-m4_define(z_rotor_pos, 3.5)         # disco del rotor z+
-m4_define(z_rotor_neg, -30)         # disco del rotor z-
+m4_define(     r_rotor,    62.9 )         # radio del rotor
+m4_define( z_rotor_pos,     3.5 )         # disco del rotor z+
+m4_define( z_rotor_neg,   -30.0 )         # disco del rotor z-
 
 # Bloques parte frontal
-m4_define(x_front, 40)              # bloques direccion eje x
-m4_define(y_front, 40)              # bloques direccion eje y
-m4_define(z_front, 40)              # bloques direccion eje x
-m4_define(grading_front, 1 1 0.1)   # gradiente 
+m4_define(       x_front, 40 )              # bloques direccion eje x
+m4_define(       y_front, 40 )              # bloques direccion eje y
+m4_define(       z_front, 40 )              # bloques direccion eje x
+m4_define( grading_front, 1 1 0.1 )          # gradiente 
 
 # Bloques parte media
-m4_define(x_med, 40)
-m4_define(y_med, 40)
-m4_define(z_med, 40)
-m4_define(grading_med, 1 1 1)
+m4_define(       x_med, 40 )
+m4_define(       y_med, 40 )
+m4_define(       z_med, 40 )
+m4_define( grading_med, 1 1 1 )
 
 # Bloques parte trasera
-m4_define(x_tras, 40)
-m4_define(y_tras, 40)
-m4_define(z_tras, 70)
-m4_define(grading_tras, 1 1 10)
+m4_define(       x_tras, 40 )
+m4_define(       y_tras, 40 )
+m4_define(       z_tras, 70 )
+m4_define( grading_tras, 1 1 10 )
 
 #----------------------------------
 
-m4_define(r_int,  [calc(1.5*r_rotor)])     # radio del disco del rotor  1.5 * radio del rotor
-m4_define(r_ext,  [calc(5*r_rotor)])       # radio exterior del dominio 5.0 * radio del rotor
-m4_define(entrada,  [calc(1.5*r_ext)])     # posicion del patch de entada direccion eje z 1.5 * radio del rotor
-m4_define(salida, [calc(5*r_ext)])         # posicion del patch de entada direccion eje z 4.5 * radio del rotor
+m4_define(   r_int,  [calc(1.5*r_rotor)] )    # radio del disco del rotor  1.5 * radio del rotor
+m4_define(   r_ext,    [calc(5*r_rotor)] )    # radio exterior del dominio 5.0 * radio del rotor
+m4_define( entrada,    [calc(1.5*r_ext)] )    # posicion del patch de entada direccion eje z 1.5 * radio del rotor
+m4_define(  salida,      [calc(5*r_ext)] )    # posicion del patch de entada direccion eje z 4.5 * radio del rotor
 
 # definicion de los arcos
 m4_define(r_int_arc, [calc(r_int*sin(rad(45)))])
@@ -125,10 +125,10 @@ blocks
 
 edges
 (
-    arc 0 1 (-r_ext_arc -r_ext_arc -entrada )
-    arc 1 2 (r_ext_arc  -r_ext_arc -entrada )
-    arc 2 3 (r_ext_arc   r_ext_arc -entrada )
-    arc 3 0 (-r_ext_arc  r_ext_arc -entrada )
+    arc   0 1 (-r_ext_arc -r_ext_arc -entrada )
+    arc   1 2 (r_ext_arc  -r_ext_arc -entrada )
+    arc   2 3 (r_ext_arc   r_ext_arc -entrada )
+    arc   3 0 (-r_ext_arc  r_ext_arc -entrada )
 
     arc  8  9 ( -r_ext_arc -r_ext_arc z_rotor_neg )  
     arc  9 10 (  r_ext_arc -r_ext_arc z_rotor_neg )
