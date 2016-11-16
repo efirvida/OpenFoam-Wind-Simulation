@@ -4,8 +4,8 @@ cd ${0%/*} || exit 1    # Run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
-cp -rf ../fix_domain/constant/polyMesh ./constant/
-mergeMeshes ./ ../mob_domain -overwrite
+cp -rf ../static_domain/constant/polyMesh ./constant/
+mergeMeshes ./ ../dynamic_domain -overwrite
 renumberMesh -overwrite
 ./setAmi
 topoSet
@@ -18,7 +18,7 @@ cp -rf ./0.org/* ./0/*
 #---------------------------------------# 
 decomposePar
 # mpiexec -n 4 pimpleDyMFoam -parallel
-mpiexec -n 4 moveDynamicMesh -parallel
+# mpiexec -n 4 moveDynamicMesh -parallel
 # runParallel pimpleDyMFoam
 # runParallel moveDynamicMesh
 #--------------------------------------#

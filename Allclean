@@ -1,9 +1,9 @@
 #!/bin/sh
 
-cd ./fix_domain
+cd ./static_domain
 ./Allclean
-cd ../mob_domain
+cd ../static_domain
 ./Allclean
-cd ../merg_domains
+cd ../dynamic_domain
 ./Allclean
 

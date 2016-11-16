@@ -1,10 +1,10 @@
 #!/bin/sh
 
-cd ./fix_domain
+cd ./static_domain
 ./Allrun
-cd ../mob_domain
+cd ../dynamic_domain
 ./Allrun
-cd ../merg_domains
+cd ../fluid_simulation
 ./Allrun
 
 rm -rf ../*_domain/processor*
