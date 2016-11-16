@@ -25,7 +25,7 @@ runApplication blockMesh
 runApplication surfaceFeatureExtract
 runApplication rotateMesh "(0 0 1)" "(1 0 0)"
 runApplication decomposePar
-snappyHexMesh -overwrite
+mpiexec -n 4 snappyHexMesh -parallel -overwrite
 runApplication reconstructParMesh -constant
 runApplication renumberMesh -overwrite
 touch ${PWD##*/}.foam > /dev/null

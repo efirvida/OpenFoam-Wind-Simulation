@@ -79,11 +79,8 @@ castellatedMeshControls
     features
     (
         {
-        file "rotor.eMesh"; 
-            levels (
-                (0.0 2) 
-                (0.3 1)
-            );
+            file "rotor.eMesh";
+            level 15;
         }
     );
 
@@ -101,12 +98,12 @@ castellatedMeshControls
         rotor
         {
             // Surface-wise min and max refinement level
-            level (5 6);
+            level (2 3);
         }
     }
 
     // Resolve sharp angles
-    resolveFeatureAngle 20;
+    resolveFeatureAngle 30;
 
     // Region-wise refinement
     // ~~~~~~~~~~~~~~~~~~~~~~
@@ -123,11 +120,6 @@ castellatedMeshControls
 
     refinementRegions
     {
-        rotor
-        {
-            mode distance;
-            levels ((0.05 5) (0.1 4));
-        }
     }
 
     // Mesh selection
@@ -149,7 +141,7 @@ snapControls
 {
     //- Number of patch smoothing iterations before finding correspondence
     //  to surface
-    nSmoothPatch 5;
+    nSmoothPatch 3;
 
     //- Relative distance for points to be attracted by surface feature point
     //  or edge. True distance is this factor times local
