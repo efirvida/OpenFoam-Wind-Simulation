@@ -31,21 +31,21 @@ m4_define( z_rotor_pos,     3.5 )         # disco del rotor z+
 m4_define( z_rotor_neg,   -30.0 )         # disco del rotor z-
 
 # Bloques parte frontal
-m4_define(       x_front, 40 )              # bloques direccion eje x
-m4_define(       y_front, 40 )              # bloques direccion eje y
-m4_define(       z_front, 40 )              # bloques direccion eje x
+m4_define(       x_front, 40 )               # bloques direccion eje x
+m4_define(       y_front, 40 )               # bloques direccion eje y
+m4_define(       z_front, 15 )               # bloques direccion eje x
 m4_define( grading_front, 1 1 0.1 )          # gradiente 
 
 # Bloques parte media
 m4_define(       x_med, 40 )
 m4_define(       y_med, 40 )
-m4_define(       z_med, 40 )
+m4_define(       z_med, 20 )
 m4_define( grading_med, 1 1 1 )
 
 # Bloques parte trasera
 m4_define(       x_tras, 40 )
 m4_define(       y_tras, 40 )
-m4_define(       z_tras, 70 )
+m4_define(       z_tras, 40 )
 m4_define( grading_tras, 1 1 10 )
 
 #----------------------------------
@@ -65,41 +65,41 @@ convertToMeters units;
 
 vertices
 (
-    ( -r_ext      0  -entrada )
-    ( 0      -r_ext  -entrada )
-    ( r_ext       0  -entrada )
-    ( 0       r_ext  -entrada )
-    ( -r_int      0  -entrada )
-    ( 0      -r_int  -entrada )
-    ( r_int       0  -entrada )
-    ( 0       r_int  -entrada )
+    ( -r_ext       0  -entrada )
+    (      0  -r_ext  -entrada )
+    ( r_ext        0  -entrada )
+    (      0   r_ext  -entrada )
+    ( -r_int       0  -entrada )
+    (      0  -r_int  -entrada )
+    ( r_int        0  -entrada )
+    (      0   r_int  -entrada )
     
-    ( -r_ext      0  z_rotor_neg )
-    ( 0      -r_ext  z_rotor_neg )
-    ( r_ext       0  z_rotor_neg )
-    ( 0       r_ext  z_rotor_neg )
-    ( -r_int      0  z_rotor_neg )
-    ( 0      -r_int  z_rotor_neg )
-    ( r_int       0  z_rotor_neg )
-    ( 0       r_int  z_rotor_neg ) 
+    ( -r_ext       0  z_rotor_neg )
+    (      0  -r_ext  z_rotor_neg )
+    ( r_ext        0  z_rotor_neg )
+    (      0   r_ext  z_rotor_neg )
+    ( -r_int       0  z_rotor_neg )
+    (      0  -r_int  z_rotor_neg )
+    ( r_int        0  z_rotor_neg )
+    (      0   r_int  z_rotor_neg ) 
 
-    ( -r_ext      0  z_rotor_pos )
-    ( 0      -r_ext  z_rotor_pos )
-    ( r_ext       0  z_rotor_pos )
-    ( 0       r_ext  z_rotor_pos )
-    ( -r_int      0  z_rotor_pos )
-    ( 0      -r_int  z_rotor_pos )
-    ( r_int       0  z_rotor_pos )
-    ( 0       r_int  z_rotor_pos )
+    ( -r_ext       0  z_rotor_pos )
+    (      0  -r_ext  z_rotor_pos )
+    ( r_ext        0  z_rotor_pos )
+    (      0   r_ext  z_rotor_pos )
+    ( -r_int       0  z_rotor_pos )
+    (      0  -r_int  z_rotor_pos )
+    ( r_int        0  z_rotor_pos )
+    (      0   r_int  z_rotor_pos )
 
-    ( -r_ext      0  salida )
-    ( 0      -r_ext  salida )
-    ( r_ext       0  salida )
-    ( 0       r_ext  salida )
-    ( -r_int      0  salida )
-    ( 0      -r_int  salida )
-    ( r_int       0  salida )
-    ( 0       r_int  salida )   
+    ( -r_ext       0  salida )
+    (      0  -r_ext  salida )
+    ( r_ext        0  salida )
+    (      0   r_ext  salida )
+    ( -r_int       0  salida )
+    (      0  -r_int  salida )
+    ( r_int        0  salida )
+    (      0   r_int  salida )   
 );
 
 blocks
