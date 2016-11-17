@@ -27,7 +27,7 @@ m4_define(units, 1)
 
 # Datos del disco del rotor
 m4_define(     r_rotor,    62.9 )         # radio del rotor
-m4_define( z_rotor_pos,     3.5 )         # disco del rotor z+
+m4_define( z_rotor_pos,     4.0 )         # disco del rotor z+
 m4_define( z_rotor_neg,   -30.0 )         # disco del rotor z-
 
 # Bloques parte frontal

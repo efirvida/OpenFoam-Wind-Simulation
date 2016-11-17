@@ -9,9 +9,9 @@ m4 -P blockMeshDict.m4 > system/blockMeshDict
 
 runApplication surfaceFeatureExtract
 runApplication blockMesh
-runApplication decomposePar
-runParallel snappyHexMesh -overwrite
-runApplication reconstructParMesh -constant
-runApplication renumberMesh -overwrite
-touch ${PWD##*/}.foam
-rm -rf processor*
+# runApplication decomposePar
+# runParallel snappyHexMesh -overwrite
+# runApplication reconstructParMesh -constant
+# runApplication renumberMesh -overwrite
+# touch ${PWD##*/}.foam
+# rm -rf processor*
