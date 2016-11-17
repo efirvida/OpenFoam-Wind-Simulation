@@ -7,10 +7,9 @@
 *_domain/system/blockMeshDict
 */constant/polyMesh*
 */constant/extendedFeatureEdgeMesh/*
-*_domain/processor*
+*/processor*
 
 fluid_simulation/0*
-fluid_simulation/processor*
 
 !0.org/*
 !*.m4
