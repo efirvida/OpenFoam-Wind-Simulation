@@ -4,6 +4,6 @@ cd ./static_domain
 ./Allclean
 cd ../dynamic_domain
 ./Allclean
-cd ../dynamic_domain
+cd ../fluid_simulation
 ./Allclean
 
