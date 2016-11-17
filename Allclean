@@ -2,7 +2,7 @@
 
 cd ./static_domain
 ./Allclean
-cd ../static_domain
+cd ../dynamic_domain
 ./Allclean
 cd ../dynamic_domain
 ./Allclean
