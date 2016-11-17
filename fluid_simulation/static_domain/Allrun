@@ -1,0 +1,32 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+case "$1" in
+    -r|--rectangular) 
+        TYPE="r" 
+        ;;
+    -c|--circular)
+        TYPE="c"
+        ;;
+    *) TYPE="c" ;;
+esac
+
+m4 -P blockMeshDict_$TYPE.m4 > system/blockMeshDict
+
+if [[ "$TYPE" == r ]] ; then
+    runApplication rotateMesh "(1 1 0)" "(1 0 0)" -constant
+fi
+
+
+runApplication blockMesh
+runApplication surfaceFeatureExtract
+runApplication rotateMesh "(0 0 1)" "(1 0 0)"
+runApplication decomposePar
+mpiexec -n 4 snappyHexMesh -parallel -overwrite
+runApplication reconstructParMesh -constant
+runApplication renumberMesh -overwrite
+touch ${PWD##*/}.foam > /dev/null
+rm -rf processor*
